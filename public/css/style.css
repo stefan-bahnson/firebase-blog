@@ -5,31 +5,36 @@ body {
   color: white;
 }
 
-#form form{
-  position: fixed;
-  top: 40%;
-  left: 37%;
-  width: 380px;
+#form-container form {
+  width: 324px;
 }
 
-#form {
+h2 {
+  text-align: center;
+}
+
+#form-container {
   display: none;
+  transition: all 300ms;
 }
 
-#form.active {
-  display: block;
-  background-color: #d21531;
+#form-container.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(5, 33, 50, 0.82);
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 input[type='text'], textarea {
-  width: 94%;
+  width: 300px;
   background-color: #052132;
   border: none;
   padding: 12px;
   color: white;
-  text-transform: capitalize;
 }
 
 input:focus, textarea:focus {
@@ -43,7 +48,7 @@ button[type="submit"] {
   color: #052132;
   font-weight: 600;
   text-transform: uppercase;
-  width: 100%;
+  width: 324px;
   padding: 12px 0;
   font-size: 1.2em;
   cursor: pointer;
@@ -161,7 +166,6 @@ button:hover {
 
 .post .meta .date {
   width: 50%;
-  border-radius: 12px 0 0 12px;
   padding: 2px 0;
 }
 
@@ -170,7 +174,7 @@ button:hover {
   background-color: #a2cfd2;
   color: #052132;
   padding: 2px 12px;
-  border-radius: 0 12px 12px 0;
+  /*border-radius: 0 12px 12px 0;*/
   text-align: center;
   text-transform: uppercase;
 }

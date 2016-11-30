@@ -14,23 +14,21 @@
 
   </div>
 </div>
-<section id="form">
-  <form onsubmit="onFormSubmit(event)">
+<section id="form-container">
+  <form id="post-form" onsubmit="onFormSubmit(event)">
     <input id="name" type="text" placeholder="Name" autocomplete="off">
     <input id="title" type="text" placeholder="Title" autocomplete="off">
-    <div>
-      <textarea name="" id="content" cols="30" rows="4" placeholder="content"></textarea>
-    </div>
+    <textarea name="" id="content" cols="30" rows="4" placeholder="content"></textarea>
     <button type="submit">create new post</button>
   </form>
 </section>
+<h2>PRESS CTRL + ENTER TO CREATE A NEW POST</h2>
 <section id="posts">
 
 </section>
 
-
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/moment/min/moment.min.js"></script>
+<script src="/jquery/jquery.js"></script>
+<script src="/moment/moment.min.js"></script>
 <script src="js/util.js"></script>
 <script src="js/ajax.js"></script>
 <script src="js/main.js"></script>

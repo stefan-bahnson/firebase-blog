@@ -1,21 +1,12 @@
 $(document).ready(function () {
   getPosts();
-
-  $(document).keypress( function(e) {
-    if ( e.ctrlKey && ( e.which === 13 ) ) {
-      $('#form').toggleClass('active');
-    }
-  })
-
+  listenForKeypressCombination();
 });
 
 function renderPosts(data) {
+  clearPosts();
 
   var posts = parseResponseData(data);
-
-  console.log(posts);
-
-  clearPosts();
 
   posts.forEach(function (post) {
     var postElement = createPostElement(post);
@@ -59,4 +50,16 @@ function onFormSubmit(event) {
     created: moment().format('YYYY-M-D, HH:mm'),
     author: name
   });
+
+  $('#form-container').toggleClass('active');
+  $('#post-form')[0].reset();
+}
+
+function listenForKeypressCombination() {
+  $(document).keypress( function(e) {
+    console.log(e.which);
+    if ( e.ctrlKey && ( e.which === 13 ) ) {
+      $('#form-container').toggleClass('active');
+    }
+  })
 }
