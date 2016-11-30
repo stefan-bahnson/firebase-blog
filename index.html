@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Blog</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="hero">
+  <img src="assets/logo.svg" alt="logo">
+  <div class="content">
+    <h2>THINK TWICE</h2>
+    <h1>CODE ONC<span class="animated-cursor">E</span></h1>
+
+  </div>
+</div>
+<section id="form">
+  <form onsubmit="onFormSubmit(event)">
+    <input id="name" type="text" placeholder="Name" autocomplete="off">
+    <input id="title" type="text" placeholder="Title" autocomplete="off">
+    <div>
+      <textarea name="" id="content" cols="30" rows="4" placeholder="content"></textarea>
+    </div>
+    <button type="submit">create new post</button>
+  </form>
+</section>
+<section id="posts">
+
+</section>
+
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/moment/min/moment.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
