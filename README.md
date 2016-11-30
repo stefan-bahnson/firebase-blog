@@ -1,6 +1,8 @@
 # firebase-blog
 Blog page consuming a Firebase REST API
 
+![alt tag](./screenshot.png)
+
 ### Prerequisites
 - node.js <https://nodejs.org>
 
